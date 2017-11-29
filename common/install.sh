@@ -14,7 +14,7 @@ init() {
     mkdir -p $DATA_PATH
 
     [ ! -f mysql-connector-java-5.1.42.jar ] && wget -nv -O mysql-connector-java-5.1.42.jar $BASE_URL/common/db_driver/mysql-connector-java-5.1.42.jar
-    [ ! -f installer.jar ] && wget -nv -O installer.jar $BASE_URL/common/installer/DigitalExperienceManager-EnterpriseDistribution-7.2.1.1-r56757.4188.jar
+    [ ! -f installer.jar ] && wget -nv -O installer.jar https://www.jahia.com/downloads/jahia/digitalexperiencemanager7.2.1/DigitalExperienceManager-EnterpriseDistribution-7.2.1.1-r56757.4188.jar
     
     wget -nv -O config.xml $BASE_URL/common/dx_7211_processing_withoutTomcat.xml
     sed -i "s#\${DB_USER}#$DB_USER#g" config.xml
