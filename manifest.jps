@@ -90,7 +90,7 @@
     "setupProcessing": [
       {
         "cmd[mstr]": [
-          "wget -O /data/install.sh ${baseUrl}/common/install.sh",
+          "wget -O /data/install.sh https://raw.githubusercontent.com/Jahia/jelastic-jahia-package/master/common/install.sh",
           "bash /data/install.sh init ${baseUrl} ${globals.db_user} ${globals.db_pass} ${globals.mngr_user} ${globals.mngr_pass} ${globals.su_pass}",
           "bash /data/install.sh setupProcessing"
         ]
